@@ -1,13 +1,16 @@
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'ejs');
+
 const port = process.env.PORT || 3000;
 
 let i = 0;
 
 app.get('/', (request, response) => {
-    i++;
-    response.send(`<h1>Hello Fullstack Lab: ${i} </h1>`);
+    console.log("[NEW REQUEST]: GET / 200 OK");
+    i++
+    response.render('index', {i: i});
 });
 
 app.listen(port, (err) => {
