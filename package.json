@@ -1,0 +1,28 @@
+{
+  "name": "como-fazer",
+  "version": "1.0.0",
+  "description": "## Workshop online Fullstack Lab - DevPleno  * https://www.youtube.com/playlist?list=PLBNBxpMAbyhXNIbnhpgDxkeSOS5E8aIqW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannydls/como-fazer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johannydls/como-fazer/issues"
+  },
+  "homepage": "https://github.com/johannydls/como-fazer#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  }
+}
