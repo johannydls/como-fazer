@@ -57,6 +57,27 @@ app.get('/categorias/excluir/:id', async (req, res) => {
     res.redirect('/categorias');
 })
 
+
+app.get('/categorias/editar/:id', async(req, res) => {
+    const content = await axios.get(`https://jls-como-fazer-devpleno.firebaseio.com/categorias/${req.params.id}.json`);
+    res.render('categorias/editar', {
+        categoria: {
+            id: req.params.id,
+            ...content.data
+        }
+    });
+});
+
+app.post('/categorias/editar/:id', async (req, res) => {
+
+    await axios.put(`https://jls-como-fazer-devpleno.firebaseio.com/categorias/${req.params.id}.json`, {
+        categoria: req.body.categoria
+    });
+
+    res.redirect('/categorias');
+})
+
+
 app.listen(port, (err) => {
     if (err) console.log("Erro:", err);
     else console.log("Server running on http://localhost:" + port);
