@@ -3,8 +3,11 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
+let i = 0;
+
 app.get('/', (request, response) => {
-    response.send('<h1>Hello Fullstack Lab</h1>');
+    i++;
+    response.send(`<h1>Hello Fullstack Lab: ${i} </h1>`);
 });
 
 app.listen(port, (err) => {
