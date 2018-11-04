@@ -1,4 +1,10 @@
-<a href="/categorias/nova">Adicionar nova categoria</a><br><br>
+<ul>
+    <li><a href="/">Início</a></li>
+    <li><a href="/categorias">Categorias</a></li>
+    <li><a href="/categorias/nova">Nova categoria</a></li>
+</ul>
+
+<br><br>
 
 <% categorias.forEach(categoria => { %>
     <%= categoria.categoria %> <a href="/categorias/excluir/<%= categoria.id %>">Excluir</a> <br>
